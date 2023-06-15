@@ -1,17 +1,17 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 #define tab "\t"
 #define delimiter "\n--------------\n"
-void FillRand(int arr[], const int n);    //заполнение массива случайными числами 
-void FillRand(double arr[], const int n); //заполнение массива случайными числами 
-void Print(const int arr[], const int n);   //вывод массива на экран
-void Print(const double arr[], const int n); //вывод массива на экран
-void Sort(int arr[], const int n); //сортировка массива
-int Sum(const int arr[], const int n); // сумма элементов массива
+void FillRand(int arr[], const int n);    //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё 
+void FillRand(double arr[], const int n); //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё 
+void Print(const int arr[], const int n);   //РІС‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
+void Print(const double arr[], const int n); //РІС‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
+void Sort(int arr[], const int n); //СЃРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°
+int Sum(const int arr[], const int n); // СЃСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°
 double Sum(const double  arr[], const int n); //
-double Avg(const int arr[], const int n);     //средне-арифмитическое элементов массива
-int minValueIn(const int arr[], const int n); //минимальное значение массива
-int maxValueIn(const int arr[], const int n); //максимальное значение массива
+double Avg(const int arr[], const int n);     //СЃСЂРµРґРЅРµ-Р°СЂРёС„РјРёС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°
+int minValueIn(const int arr[], const int n); //РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°
+int maxValueIn(const int arr[], const int n); //РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°
 
 
 void main()
@@ -22,23 +22,23 @@ void main()
 
 	FillRand(arr,n);
 	Print(arr, n);
-	cout << "Сумма элементов массива: " << Sum(arr, n) << endl;
-	cout << "Средне-арифмитическое элементов массива: " << Avg(arr, n) << endl;
-	cout << "Минимальное значение массива: " << minValueIn(arr, n) << endl;
-	cout << " Максимальное значение массива: " << maxValueIn(arr, n) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(arr, n) << endl;
+	cout << "РЎСЂРµРґРЅРµ-Р°СЂРёС„РјРёС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(arr, n) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " << minValueIn(arr, n) << endl;
+	cout << " РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " << maxValueIn(arr, n) << endl;
 	Sort(arr, n);
 	Print(arr, n);
 
 }
 
-void FillRand(int arr[], const int n)   //заполнение массива случайными числами
+void FillRand(int arr[], const int n)   //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 {
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = rand() % 10;
 	}
 }
-void FillRand(double arr[], const int n)    //заполняет массив случайными числами
+void FillRand(double arr[], const int n)    //Р·Р°РїРѕР»РЅСЏРµС‚ РјР°СЃСЃРёРІ СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -46,7 +46,7 @@ void FillRand(double arr[], const int n)    //заполняет массив случайными числам
 		arr[i] /= 100;
 	}
 }
-void Print(const int arr[], const int n) //вывод массива на экран
+void Print(const int arr[], const int n) //РІС‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -54,7 +54,7 @@ void Print(const int arr[], const int n) //вывод массива на экран
 	}
 	cout << endl;
 }
-	void Print( const double arr[], const int n) //вывод массива на экран
+	void Print( const double arr[], const int n) //РІС‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -62,7 +62,7 @@ void Print(const int arr[], const int n) //вывод массива на экран
 	}
 	cout << endl;
 }
-	void Sort(int arr[], const int n) //сортировка массива
+	void Sort(int arr[], const int n) //СЃРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°
 	{
 		for (int i = 0; i < n; i++)
 		{
