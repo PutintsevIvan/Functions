@@ -3,7 +3,7 @@ using namespace std;
 #define tab "\t"
 #define delimiter "\n--------------\n"
 void FillRand(int arr[], const int n);    //заполнение массива случайными числами 
-void FillRand2(double arr[], const int n); //заполнение массива случайными числами 
+void FillRand(double arr[], const int n); //заполнение массива случайными числами 
 void Print(const int arr[], const int n);   //вывод массива на экран
 void Print(const double arr[], const int n); //вывод массива на экран
 void Sort(int arr[], const int n); //сортировка массива
@@ -31,14 +31,14 @@ void main()
 
 }
 
-void FillRand(double arr[], const int n)   //заполнение массива случайными числами
+void FillRand(int arr[], const int n)   //заполнение массива случайными числами
 {
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = rand() % 10;
 	}
 }
-void FillRand2(double arr[], const int n)    //заполняет массив случайными числами
+void FillRand(double arr[], const int n)    //заполняет массив случайными числами
 {
 	for (int i = 0; i < n; i++)
 	{

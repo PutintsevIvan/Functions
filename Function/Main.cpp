@@ -24,7 +24,7 @@ void main()
 	//cout << a << " ^ " << b << " = " << power(a, b) << endl;
 }
 
-int Add(int a = 0, int b = 0, int c = 0)		//Реализация функции (Определение функции - Function definition)
+int Add(int a, int b, int c)		//Реализация функции (Определение функции - Function definition)
 {
 	//Addition - сложение
 	int sum = a + b + c;
