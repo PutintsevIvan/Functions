@@ -36,7 +36,7 @@ double Avg(const char arr[], const int n);
 //double Avg(const int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int minValueIn(const int arr[], const int n); //минимальное значение массив
-char minValueIn(const char arr[], const int n);
+char minValueIn(const char arr[], const int n); 
 double minValueIn(const double arr[], const int n); 
 
 int maxValueIn(const int arr[], const int n); //максимальное значение массива
