@@ -21,13 +21,13 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{26ddb938-09c6-454f-9c1d-1d1e865034e1}</ProjectGuid>
-    <RootNamespace>Function2</RootNamespace>
+    <ProjectGuid>{cd7e9507-9fd2-4307-aa2a-1163af06dba4}</ProjectGuid>
+    <RootNamespace>ArraysLibTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -76,10 +76,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Function2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)\Debug\Function2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,19 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FillRand.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Print.cpp" />
-    <ClCompile Include="sort.cpp" />
-    <ClCompile Include="statistics.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="constans.h" />
-    <ClInclude Include="FillRand.h" />
-    <ClInclude Include="Print.h" />
-    <ClInclude Include="sort.h" />
-    <ClInclude Include="statistics.h" />
-    <ClInclude Include="stdafx.h" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
